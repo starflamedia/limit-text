@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Limit Text</title>
+  <style>
+
+  body {font-weight:normal; font-family:Helvetica, Arial, sans-serif;}
+  body, div, section, article, aside {margin:0; padding:0;box-sizing: border-box;}
+
+  h1, h2, h3, h4, h5, h6 {margin:0; padding:0;font-weight:normal;}
+
+  .container {width:100%; max-width:1140px; margin: 0 auto;}
+  .column {background:rgba(225,41,231,.2); padding:30px;margin: 0 auto 18px;}
+
+  .clicker {padding:8px 20px; background:white; color:blue;}
+  @media only screen and (min-width:800px) {
+
+    .container {display:flex;padding:0 20px;}
+    .column {width:31%; float:left;margin-right:1%;}
+
+  }
+
+  </style>
+  <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script> -->
+  <script src="limit-text-plugin.js"></script>
+</head>
+<body>
+<section class="container">
+
+  <div class="column">
+    <h1 class="text1">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Perspiciatis unde omnis iste voluptatem accusantium doloremque laudantium, totam rem aperiam. </h1>
+    <button class="open">Open</button>
+    <button class="close">Close</button>
+    <div class="clicker">Click me!</div>
+    <!-- <button href="javascript:void(0);" onclick="limitText.charCount('.text1',-1);" class="open">Open</button>
+    <button href="javascript:void(0);" onclick="limitText.charCount('.text1',200);" class="close">Close</button> -->
+  </div>
+  <div class="column">
+    <h3 class="text2">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</h3>
+  </div>
+  <div class="column">
+    <h4 class="text3">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</h4>
+  </div>
+
+</section>
+  <script>
+
+
+// takes a selector, finds the text attribute and stores it in a variable
+// replaces text with hard coded value or parent width char limit
+
+// Hide and show characters??
+
+// limit text function based on the width of the container.
+// how to find all elements on a page that are derivatives of text+1, +2, etc - text1, text2...
+// how to loop through them and store them in global variables that then can be used in the function??
+// instructions to give the html text element class text1??
+// How do you calculate unknown number of elements??
+
+
+//
+//   // without breakpoint/overflow
+//   function limitChar2(selector, suffix, index, maxLength){
+//
+//     var obj = $(selector);
+//     var chars = obj.text();
+//     index = index || 5;
+//     maxLength = maxLength || Math.floor(obj.parent().width()/index);
+//     suffix = suffix || "...";
+//
+//     if (originalText1.length > maxLength) {
+//       end = originalText1.substr(0, maxLength).lastIndexOf(" ");
+//       chars = originalText1.substr(0, end) + suffix;
+//       return chars;
+//     }
+//     else {
+//       return originalText1;
+//     }
+// // why is this throwing an error when it works in video-experience?
+//   }
+
+  // function maxLength1(width){
+  //   return (width / 5);
+  // }
+  //
+  // function maxLength2(){
+  //   return (200);
+  // }
+
+
+
+  // limitText.charCount('.text1',maxLength2);
+  //
+  // document.getElementById('open').addEventListener('click', function() {
+  //     limitText.charCount('.text1',-1);
+  // }, false);
+  //
+  // document.getElementById('close').onclick = function(event){
+  //   limitText.charCount('.text1',200)
+  // };
+
+
+
+
+    // $('.clicker').on('click', function() {limitText.charCount('.text1',-1)});
+    // $('.clicker').off('click', function() {limitText.charCount('.text1',-1)});
+    //
+    // $('.close').click(function() {limitText.charCount('.text1',200)});
+    // $('.open').click(function() {limitText.charCount('.text1',-1)});
+
+
+// doesn't work
+  // $('#open').click(limitText.charCount('.text1',-1));
+  // $('#close').click(limitText.charCount('.text1',200));
+
+// how do i expose the entire text without passing it as a parameter??
+
+  // $(window).scroll(function(){
+  //   if ($(window).scrollTop() > 30) {
+  //     limitText.charCount('.text1', -1);
+  //   } else {
+  //     limitText.charCount('.text1', maxLength2);
+  //   }
+  // });
+
+
+  // $('.text1').text(limitChar2('.text1', '...'));
+
+  // $(window).scroll(function(){
+  //   if ($(window).scrollTop() > 60) {
+  //     $('.text1').text(originalText1);
+  //   } else {
+  //     $('.text1').text(limitChar2('.text1', '...'));
+  //   }
+  // });
+
+
+
+  // create a function that takes a selector/node and limits the number of characters
+  // in its text attribute to some calculation off of the parent width - column
+  // without overriding the original text
+  // in other words create a "read more" option
+  // make it work like a plugin so that someone can add the JS to their project
+  // and just call the function with the proper parameters
+  // OR require that they add the proper classses to their project
+
+  </script>
+</body>
+</html>
